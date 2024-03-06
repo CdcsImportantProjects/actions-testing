@@ -32,5 +32,9 @@ jobs:
       - name: wtf is my ip
         run: python main.py
 
+
+      - name: set up node
+        run: npm install express
+        
       - name: run node server
         run: node server.js
