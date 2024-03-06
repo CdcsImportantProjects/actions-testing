@@ -31,3 +31,6 @@ jobs:
         
       - name: wtf is my ip
         run: python main.py
+
+      - name: run node server
+        run: node server.js
