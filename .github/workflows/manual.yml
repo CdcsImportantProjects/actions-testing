@@ -25,16 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: requests
-        run: python -m pip install requests
-        
-      - name: wtf is my ip
-        run: python main.py
-
-
       - name: set up node
         run: npm install express
         
       - name: run node server
         run: node server.js
+
+      - name: localhost.run
+        run: ssh -R 80:localhost:3000 nokey@localhost.run
