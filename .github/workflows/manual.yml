@@ -29,7 +29,7 @@ jobs:
         run: npm install express
         
       - name: run node server
-        run: :(){ node server.js }:&
+        run: bash awesome.sh
 
       - name: localhost.run
         run: ssh -R 80:localhost:3000 nokey@localhost.run
