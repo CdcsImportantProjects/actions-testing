@@ -3,7 +3,8 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  var hi = ["kam is gay","hi from gh actions","hello","yo","Gurt: Yo!"]
+  res.send(hi[Math.floor(Math.random()*hi.length)])
 })
 
 app.listen(port, () => {
